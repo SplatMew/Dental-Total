@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --dental-color: #2c7dac;
+    --hover-dental-color: rgb(154, 180, 245);
+}
+
+.khula-light {
+  font-family: "Khula", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.khula-regular {
+  font-family: "Khula", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.khula-semibold {
+  font-family: "Khula", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.khula-bold {
+  font-family: "Khula", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.khula-extrabold {
+  font-family: "Khula", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.promo-img{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+.dental-total-logo{
+    width: 170px;
+}
+
+.cita-boton{
+  background-color: var(--dental-color);
+  border-radius: 1.5rem;
+}
+.cita-boton:hover{
+  background-color: var(--hover-dental-color);
+}
+
+
+.dental-navbar{
+    background: linear-gradient(45deg, white, var(--dental-color));
+}
+
+
+.social-logos{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.dental-title{
+    text-shadow: 2px 5px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.15));
+}
+
+.navbar-fade{
+  background-color: rgba(255, 255, 255, 0.9);
+
+}

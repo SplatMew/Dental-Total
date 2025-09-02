@@ -1,30 +1,55 @@
-import { useState } from "react";
+import React, { useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {Link} from 'react-router-dom';
 
-const Carousel = ({ images }) => {
-  const [current, setCurrent] = useState(0);
+import { promo1, promo2, promo3 } from "../components/images";
 
-  const nextSlide = () => setCurrent((current + 1) % images.length);
-  const prevSlide = () => setCurrent((current - 1 + images.length) % images.length);
+const Carousel = ({items, settings = {}, clickable = false}) => {
+  const imageSliderRef = useRef(null);
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    ...settings,
+  };
 
   return (
-    <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-md">
-      <img
-        src={images[current]}
-        alt="treatment"
-        className="w-full h-full object-cover transition-all duration-500"
-      />
-      <button
-        className="absolute left-0 top-1/2 bg-black bg-opacity-50 text-white p-2"
-        onClick={prevSlide}
-      >
-        ❮
-      </button>
-      <button
-        className="absolute right-0 top-1/2 bg-black bg-opacity-50 text-white p-2"
-        onClick={nextSlide}
-      >
-        ❯
-      </button>
+  
+    <div className="relative w-full lg:h-120 sm:h-60 overflow-hidden rounded-lg shadow-md">
+      <Slider {...carouselSettings} ref={imageSliderRef}>
+        {items.map((item, index) => {
+          const content = (
+            <img src={item.image} alt={item.title || `slide-${index}`}
+            className="w-full object-cover rounded-lg" 
+            />
+          );
+
+           return (
+            <div key={index} className="px-2">
+              {clickable && item.link ? (
+                <Link to={item.link} className="block">
+                  {content}
+                  {item.title && (
+                    <p className="text-center mt-2 font-semibold">{item.title}</p>
+                  )}
+                </Link>
+              ) : (
+                <>
+                  {content}
+                  {item.title && (
+                    <p className="text-center mt-2 font-semibold">{item.title}</p>
+                  )}
+                </>
+              )}
+            </div>
+          );
+        })}
+      </Slider>
     </div>
   );
 };

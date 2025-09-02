@@ -1,29 +1,87 @@
 import Carousel from "../components/Carousel";
+import { whatsapp_logo, dr_humberto, promo1, promo2, promo3 } from "../components/images";
+
+const promoImages = [
+  {image: "src/img/promos/promo1.jpg"},
+  {image: 'src/img/promos/promo2.png'},
+  {image: 'src/img/promos/promo3.jpg'},
+];
+
+const serviceImages = [
+  {image:"", link:"/services/ortodoncia"},
+  {image:"", link:"/services/implantes"},
+  {image:"", link:"/services/blanqueamiento"},
+  {image:"", link:"/services/limpieza"},
+  {image:"", link:"/services/extraccion"},
+  {image:"", link:"/services/protesis"},
+
+];
 
 const Home = () => {
-  const images = [
-    "https://via.placeholder.com/800x400?text=Treatment+1",
-    "https://via.placeholder.com/800x400?text=Treatment+2",
-    "https://via.placeholder.com/800x400?text=Treatment+3"
-  ];
-
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Bienvenido a Dental Total</h1>
-      <p className="mb-6">Hacemos un trabajo bucal excelente, contamos con años de experiencia</p>
-      
-      <Carousel images={images} />
+      <Carousel 
+      items={promoImages}
+      settings={{slidesToShow: 1}}
+      clickable={false}/>
 
-      <div className="mt-6">
-        <a
-          href="https://wa.me/1234567890"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600"
-        >
-          Agenda en WhatsApp
-        </a>
-      </div>
+      <h1 className="text-5xl khula-bold mt-10 mb-4 dental-title">
+        ¡Bienvenido a Dental Total!
+      </h1>
+      <p className="text-2xl mb-6">
+        El centro dental donde cuidamos de tu sonrisa.
+      </p>
+
+      <section className="flex justify-around items-center flex-col sm:flex-row">
+        <div className="w-auto sm:w-100 lg:w-200 lg:text-2xl sm:text-xl">
+          <p>
+            Descripción general de la marca, e.g: Somos la red de clínicas
+            odontológicas más grandes de Sinaloa.
+          </p>
+          <p className="mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p className="mt-2">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
+          </p>
+          <p className="text-blue-500 mt-2">
+            Procedimientos que se realizan, e.g: Ortodoncias, brackets, etc.
+          </p>
+
+          <div className=" flex items-center justify-center mt-6">
+            <a
+              href="https://web.whatsapp.com/send/?phone=%2B526671803379"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cita-boton transition-colors duration-200 text-white px-4 py-2 flex items-center rounded-2xl shadow "
+            >
+              <img className="p-2 social-logos " src={whatsapp_logo} alt="" />
+              Agenda en WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="">
+          <img
+            className="w-auto sm:w-100 lg:w-200 rounded-4xl mt-10 sm:mt-0"
+            src={dr_humberto}
+            alt="dr humberto"
+          />
+        </div>
+      </section>
+
+      <section className="flex justify-around items-center flex-col sm:flex-row">
+        <Carousel
+          items={serviceImages}
+          settings={{slidesToShow:4}}
+          clickable={true}
+        />
+      </section>
 
       <div className="mt-6">
         <h2 className="text-2xl font-bold mb-2">Ubicaciones</h2>

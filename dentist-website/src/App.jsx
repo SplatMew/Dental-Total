@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Locations from "./pages/Locations";
 import LocationDetail from "./pages/LocationDetail";
+import './styles/dentalstyles.css'
 
 function App() {
   return (
@@ -14,10 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/:serviceId" element={<ServiceDetail />} />
-        <Route path="/locations" element={<Locations />} />
-        <Route path="/locations/:locationId" element={<LocationDetail />} />
+        <Route path="/servicios" element={<Services />} />
+        <Route path="/servicios/:serviceId" element={<ServiceDetail />} />
+        <Route path="/ubicaciones" element={<Locations />} />
+        <Route path="/ubicaciones/:locationId" element={<LocationDetail />} />
       </Routes>
     </Router>
   );
