@@ -12,7 +12,6 @@ const Carousel = ({items, settings = {}, clickable = false}) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
     ...settings,
@@ -20,24 +19,24 @@ const Carousel = ({items, settings = {}, clickable = false}) => {
 
   return (
   
-    <div className="relative w-full lg:h-120 sm:h-60 overflow-hidden rounded-lg shadow-md">
+    <div className="relative w-full lg:h-120 sm:h-60 overflow-hidden">
       <Slider {...carouselSettings} ref={imageSliderRef}>
         {items.map((item, index) => {
           const content = (
             <img src={item.image} alt={item.title || `slide-${index}`}
-            className="w-full object-cover rounded-lg" 
+            className="w-full h-100 object-cover rounded-lg" 
             />
           );
 
            return (
             <div key={index} className="px-2">
               {clickable && item.link ? (
-                <Link to={item.link} className="block">
-                  {content}
+
+                <a href={item.link} target="_self">{content}
                   {item.title && (
                     <p className="text-center mt-2 font-semibold">{item.title}</p>
-                  )}
-                </Link>
+                  )}</a>
+                
               ) : (
                 <>
                   {content}

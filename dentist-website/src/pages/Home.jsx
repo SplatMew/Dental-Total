@@ -8,12 +8,12 @@ const promoImages = [
 ];
 
 const serviceImages = [
-  {image:"", link:"/services/ortodoncia"},
-  {image:"", link:"/services/implantes"},
-  {image:"", link:"/services/blanqueamiento"},
-  {image:"", link:"/services/limpieza"},
-  {image:"", link:"/services/extraccion"},
-  {image:"", link:"/services/protesis"},
+  {image:"src/img/servicios/ortodoncia.jpeg", link:"/services/ortodoncia"},
+  {image:"src/img/servicios/implantes.jpeg", link:"/services/implantes"},
+  {image:"src/img/servicios/blanqueamiento.jpg", link:"/services/blanqueamiento"},
+  {image:"src/img/servicios/limpieza.jpeg", link:"/services/limpieza"},
+  {image:"src/img/servicios/extraccion.png", link:"/services/extraccion"},
+  {image:"src/img/servicios/protesis.jpg", link:"/services/protesis"},
 
 ];
 
@@ -22,7 +22,7 @@ const Home = () => {
     <div className="p-6">
       <Carousel 
       items={promoImages}
-      settings={{slidesToShow: 1}}
+      settings={{slidesToShow: 1, slidesToScroll:1}}
       clickable={false}/>
 
       <h1 className="text-5xl khula-bold mt-10 mb-4 dental-title">
@@ -75,13 +75,18 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex justify-around items-center flex-col sm:flex-row">
+      <section className="mt-10 flex justify-around items-center flex-col sm:flex-row">
         <Carousel
           items={serviceImages}
-          settings={{slidesToShow:4}}
+          settings={{slidesToShow:4, slidesToScroll: 4, responsive:[
+            { breakpoint: 1024, settings:{slidesToShow:3 , slidesToScroll: 3} },
+            { breakpoint: 768, settings:{slidesToShow:2, slidesToScroll: 2} },
+            { breakpoint: 480, settings:{slidesToShow:1, slidesToScroll: 1} },
+          ]}}
           clickable={true}
         />
       </section>
+  
 
       <div className="mt-6">
         <h2 className="text-2xl font-bold mb-2">Ubicaciones</h2>
