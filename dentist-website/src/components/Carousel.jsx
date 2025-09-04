@@ -24,7 +24,7 @@ const Carousel = ({items, settings = {}, clickable = false}) => {
         {items.map((item, index) => {
           const content = (
             <img src={item.image} alt={item.title || `slide-${index}`}
-            className="w-full h-100 object-cover rounded-lg" 
+            className="w-full h-100 object-cover rounded-lg " style={{outline: "none"}} 
             />
           );
 

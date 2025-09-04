@@ -1,5 +1,6 @@
 import Carousel from "../components/Carousel";
 import { whatsapp_logo, dr_humberto, promo1, promo2, promo3 } from "../components/images";
+import LocationMap from "../components/LocationMap";
 
 const promoImages = [
   {image: "src/img/promos/promo1.jpg"},
@@ -25,7 +26,7 @@ const Home = () => {
       settings={{slidesToShow: 1, slidesToScroll:1}}
       clickable={false}/>
 
-      <h1 className="text-5xl khula-bold mt-10 mb-4 dental-title">
+      <h1 className="text-3xl sm:text-5xl khula-bold mt-10 mb-4 dental-title">
         ¡Bienvenido a Dental Total!
       </h1>
       <p className="text-2xl mb-6">
@@ -75,7 +76,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mt-10 flex justify-around items-center flex-col sm:flex-row">
+      <section className="mt-10 flex justify-around flex-col">
+        <h1 className="text-3xl sm:text-5xl khula-bold mt-10 mb-4 dental-title">Nuestros Servicios</h1>
         <Carousel
           items={serviceImages}
           settings={{slidesToShow:4, slidesToScroll: 4, responsive:[
@@ -86,19 +88,10 @@ const Home = () => {
           clickable={true}
         />
       </section>
-  
 
-      <div className="mt-6">
-        <h2 className="text-2xl font-bold mb-2">Ubicaciones</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!..."
-          width="100%"
-          height="300"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
+      <section className="mt-10">
+        <LocationMap/>
+      </section>
     </div>
   );
 };

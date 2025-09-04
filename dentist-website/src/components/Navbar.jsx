@@ -18,11 +18,11 @@ const Navbar = () => {
     "Prótesis"
   ];
 
-  const locations = ["Location 1", "Location 2", "Location 3", "Location 4", "Location 5", "Location 6"];
+  const locations = ["Dental Total Rosales", "Dental Total Carrasco", "Dental Total Escobedo", "Dental Total 6 de Enero"];
 
   return (
     <>
-      <style jsx>{`
+      <style>{`
         .dropdown-link {
           position: relative;
         }
