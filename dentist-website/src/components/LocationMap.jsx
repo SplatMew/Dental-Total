@@ -9,7 +9,7 @@ const LocationMap = () => {
 
   return(
 
-    <APIProvider apiKey="AIzaSyAeAxhKSRw9WQEba4oy9OqBQoJxAgU7WLM" onLoad={() => console.log('Maps API has loaded.')}>
+    <APIProvider apiKey={GOOGLE_MAPS_API} onLoad={() => console.log('Maps API has loaded.')}>
   
     <div className="mt-10" style={{ width: '100%', height:'600px'}}>
       <Map
