@@ -69,6 +69,10 @@
     text-shadow: 2px 5px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.15));
 }
 
+.footer-background{
+  background-color: var(--dental-color);
+}
+
 .navbar-fade{
   background-color: rgba(255, 255, 255, 0.9);
 

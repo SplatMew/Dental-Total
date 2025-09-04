@@ -4,13 +4,13 @@ import LocationMap from "../components/LocationMap";
 const Locations = () => {
   return (
     <div className="text-gray-700 mr-6 ml-6 sm:mr-20 sm:ml-20">
-      {/* Título principal */}
+      
       <h1 className="khula-extrabold text-3xl sm:text-5xl mt-10 mb-6 text-gray-900">
         Nuestras Clínicas
       </h1>
 
       <div className="flex flex-col sm:flex-row">
-        {/* Texto descriptivo y lista */}
+      
         <div className="w-full sm:w-1/2 lg:w-2/5 p-6 sm:p-10">
           <h2 className="khula-semibold text-2xl lg:text-3xl text-blue-600 leading-snug mb-4">
             Estamos donde tú estás, porque tu sonrisa lo vale.
@@ -57,7 +57,7 @@ const Locations = () => {
           </ul>
         </div>
 
-        {/* Mapa */}
+        
         <div className="w-full sm:w-1/2 lg:w-3/5">
           <LocationMap />
         </div>

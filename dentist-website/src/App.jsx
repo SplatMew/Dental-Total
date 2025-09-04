@@ -7,6 +7,7 @@ import ServiceDetail from "./pages/ServiceDetail";
 import Locations from "./pages/Locations";
 import LocationDetail from "./pages/LocationDetail";
 import './styles/dentalstyles.css'
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/ubicaciones" element={<Locations />} />
         <Route path="/ubicaciones/:locationId" element={<LocationDetail />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
