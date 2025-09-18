@@ -2,11 +2,12 @@ import React from "react";
 import { whatsapp_logo, facebook_logo } from "./images";
 import logo from "../img/logos/dental-total-logo3.png";
 import { Link } from "react-router-dom";
+import locationData, { serviceData } from '../components/dataExports';
 
 function Footer() {
   return (
     <div className=" flex flex-col khula-regular text-2xl mt-6">
-      <div className="p-6 flex flex-col sm:flex-row items-center justify-around space-y-3 border-b-2 border-t-2 border-blue-600 border- ">
+      <div className="space-x-5 p-6 flex flex-col sm:flex-row items-center justify-around space-y-3 border-b-2 border-t-2 border-blue-600 border- ">
         <div className=" flex items-center">
           <a
             href="https://web.whatsapp.com/send/?phone=%2B526671803379"
@@ -54,64 +55,21 @@ function Footer() {
               Servicios
             </Link>
           </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200 "
-            >
-              Implantes
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200 "
-            >
-              Ortodoncia
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200 "
-            >
-              Blanqueamiento
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200 "
-            >
-              Limpieza
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200 "
-            >
-              Endodoncia
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200 "
-            >
-              Extracción
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200 "
-            >
-              Prótesis
-            </Link>
-          </li>
+          {serviceData.map((serv, index) => (
+                            <li key={index} className="overflow-hidden">
+                              <Link
+                                to={`/servicios/${serv.name
+                                  .toLowerCase()
+                                  .replace(/\s+/g, "-")}`}
+                                  
+                                  state={serv}
+                                  className="hover:text-blue-400 transition-colors duration-200 "
+                              >
+                                {serv.name}
+                              </Link>
+                            </li>
+                          ))}
+          
         </ul>
         <ul className="space-y-2 flex flex-col justify-center items-center">
           <li>
@@ -122,38 +80,20 @@ function Footer() {
               Ubicaciones
             </Link>
           </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200"
-            >
-              Clínica 6 de Enero
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200"
-            >
-              Clínica Escobedo
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200"
-            >
-              Clínica Carrasco
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/servicios"
-              className="hover:text-blue-400 transition-colors duration-200"
-            >
-              Clínica Rosales
-            </Link>
-          </li>
+          {locationData.map((loc, index) => (
+                            <li key={index} className="overflow-hidden">
+                              <Link
+                                to={`/ubicaciones/${loc.name
+                                  .toLowerCase()
+                                  .replace(/\s+/g, "-")}`}
+                                  
+                                  state={loc}
+                                  className="hover:text-blue-400 transition-colors duration-200 "
+                              >
+                                {loc.name}
+                              </Link>
+                            </li>
+                          ))}
         </ul>
       </div>
     </div>

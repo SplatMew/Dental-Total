@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 
-import { serviceImages } from "../components/dataExports";
+import { serviceData } from "../components/dataExports";
 
 const Services = () => {
   return (
@@ -17,7 +17,7 @@ const Services = () => {
         comodidad y la seguridad de nuestros pacientes.
       </p>
       <Carousel
-        items={serviceImages}
+        items={serviceData}
         settings={{
           slidesToShow: 4,
           slidesToScroll: 4,

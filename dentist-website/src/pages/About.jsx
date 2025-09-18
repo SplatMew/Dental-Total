@@ -1,3 +1,4 @@
+import BotonCita from "../components/BotonCita";
 import { doctor1, whatsapp_logo, dr_humberto } from "../components/images";
 
 const About = () => {
@@ -29,6 +30,8 @@ const About = () => {
             eso ponemos al alcance de todos una atención cálida, honesta y
             profesional.
           </p>
+
+          <BotonCita/>
         </div>
 
         <div className="">
@@ -64,17 +67,7 @@ const About = () => {
             los más altos estándares de calidad y tecnología.
           </p>
 
-          <div className=" flex items-center justify-center mt-6">
-            <a
-              href="https://web.whatsapp.com/send/?phone=%2B526671803379"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cita-boton transition-colors duration-200 text-white px-4 py-2 flex items-center rounded-2xl shadow "
-            >
-              <img className="p-2 social-logos " src={whatsapp_logo} alt="" />
-              Agenda en WhatsApp
-            </a>
-          </div>
+          
         </div>
 
         <div className="">
