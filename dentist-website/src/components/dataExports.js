@@ -47,39 +47,39 @@ export default [
 ];
 export const serviceData = [
   { 
-    image: "/src/img/servicios/ortodoncia.jpeg", 
+    image: "./src/img/servicios/ortodoncia.jpeg", 
     name: "Ortodoncia", 
     info: "La ortodoncia es el tratamiento indicado para alinear los dientes y corregir la mordida, ya sea mediante brackets tradicionales o alineadores invisibles. Además de mejorar la estética de la sonrisa, también contribuye a una mejor mordida, facilita la higiene y previene problemas en las encías y en la articulación de la mandíbula." 
   },
   { 
-    image: "/src/img/servicios/implantes.jpeg", 
+    image: "./src/img/servicios/implantes.jpeg", 
     name: "Implantes", 
     info: "Los implantes dentales son pequeñas piezas de titanio que se colocan en el hueso maxilar para reemplazar dientes perdidos. Funcionan como raíces artificiales sobre las cuales se fijan coronas, puentes o prótesis fijas, devolviendo al paciente la estética, la funcionalidad y la confianza al sonreír o comer." 
   },
   {
-    image: "/src/img/servicios/blanqueamiento.jpg",
+    image: "./src/img/servicios/blanqueamiento.jpg",
     name: "Blanqueamiento",
     info: "El blanqueamiento dental es un procedimiento estético que aclara varios tonos el color natural de los dientes, eliminando manchas provocadas por el café, vino, tabaco o el paso del tiempo. Es seguro, rápido y efectivo, proporcionando una sonrisa más brillante y juvenil en pocas sesiones.",
   },
   { 
-    image: "/src/img/servicios/limpieza.jpeg", 
+    image: "./src/img/servicios/limpieza.jpeg", 
     name: "Limpieza", 
     info: "La limpieza dental profesional elimina la placa bacteriana, el sarro y las manchas superficiales que no se pueden quitar solo con el cepillado en casa. Este tratamiento ayuda a prevenir caries, gingivitis y enfermedades periodontales, manteniendo tu boca fresca, sana y cuidada." 
   },
   { 
-    image: "/src/img/servicios/extraccion.png", 
+    image: "./src/img/servicios/extraccion.png", 
     name: "Extracción", 
     info: "La extracción dental es indicada cuando un diente está severamente dañado, destruido por caries o representa un problema para la correcta alineación de la sonrisa. Se realiza de forma cuidadosa y con anestesia local, garantizando la comodidad del paciente y promoviendo una adecuada recuperación." 
   },
   { 
-    image: "/src/img/servicios/protesis.jpg", 
+    image: "./src/img/servicios/protesis.jpg", 
     name: "Prótesis", 
     info: "Las prótesis dentales permiten restaurar la función y la estética cuando existen pérdidas parciales o totales de dientes. Pueden ser removibles o fijas, adaptadas a cada paciente, y devuelven la capacidad de masticar, hablar y sonreír con naturalidad y seguridad." 
   },
 ];
 
 export const promoImages = [
-  { image: "/src/img/promos/promo1.jpg" },
-  { image: "/src/img/promos/promo2.png" },
-  { image: "/src/img/promos/promo3.jpg" },
+  { image: "./src/img/promos/promo1.jpg" },
+  { image: "./src/img/promos/promo2.png" },
+  { image: "./src/img/promos/promo3.jpg" },
 ];
