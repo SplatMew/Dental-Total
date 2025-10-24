@@ -79,7 +79,7 @@ export const serviceData = [
 ];
 
 export const promoImages = [
-  { image: "../img/promos/promo1.jpg" },
-  { image: "../img/promos/promo2.png" },
-  { image: "../img/promos/promo3.jpg" },
+  { image: '../img/promos/promo1.jpg' },
+  { image: '../img/promos/promo2.png' },
+  { image: '../img/promos/promo3.jpg' },
 ];
